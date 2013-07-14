@@ -4,11 +4,11 @@ gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
-gem 'therubyracer' #for asset pipeline
-gem 'bootstrap-sass' #for bootstrap
-
+group :development, :test do
+  gem 'sqlite3'
+  gem 'therubyracer' #for asset pipeline
+  gem 'annotate' # to annotate models with information
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -20,12 +20,13 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
+
 gem 'jquery-rails'
 gem 'capybara' #rspec dependency; for rspec visiting
 gem 'rspec-rails'
-
+gem 'bootstrap-sass' #for bootstrap
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+ gem 'bcrypt-ruby', '~> 3.0.1'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
