@@ -6,7 +6,8 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'therubyracer' #for asset pipeline
+gem 'bootstrap-sass' #for bootstrap
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -19,9 +20,8 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
-
 gem 'jquery-rails'
-gem 'webrat' #rspec dependency; for rspec has_selector
+gem 'capybara' #rspec dependency; for rspec visiting
 gem 'rspec-rails'
 
 # To use ActiveModel has_secure_password
