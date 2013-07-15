@@ -8,6 +8,10 @@ group :development, :test do
   gem 'sqlite3'
   gem 'therubyracer' #for asset pipeline
   gem 'annotate' # to annotate models with information
+  gem 'rspec-rails' #for testing
+  gem 'webrat'
+  gem 'capybara' #rspec dependency; for rspec 'visit'
+  gem 'factory_girl_rails' #rspec dependency; for rspec factory objects
 end
 # Gems used only for assets and not required
 # in production environments by default.
@@ -22,8 +26,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'capybara' #rspec dependency; for rspec visiting
-gem 'rspec-rails'
 gem 'bootstrap-sass' #for bootstrap
 # To use ActiveModel has_secure_password
  gem 'bcrypt-ruby', '~> 3.0.1'
@@ -39,3 +41,7 @@ gem 'bootstrap-sass' #for bootstrap
 
 # To use debugger
 # gem 'debugger'
+
+group :production do
+  gem 'pg', '0.12.2' #for heroku deployments
+end
