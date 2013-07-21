@@ -12,6 +12,7 @@ group :development, :test do
   gem 'webrat'
   gem 'capybara' #rspec dependency; for rspec 'visit'
   gem 'factory_girl_rails' #rspec dependency; for rspec factory objects
+
 end
 # Gems used only for assets and not required
 # in production environments by default.
@@ -28,7 +29,9 @@ end
 gem 'jquery-rails'
 gem 'bootstrap-sass' #for bootstrap
 # To use ActiveModel has_secure_password
- gem 'bcrypt-ruby', '~> 3.0.1'
+gem 'bcrypt-ruby', '~> 3.0.1'
+ 
+gem 'date_validator'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
